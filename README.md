@@ -244,10 +244,10 @@ The core formulas of the project, in the form the lab's code uses. Each companio
 **Negative binomial model with the paired design (bulk RNA and pseudobulk).**
 
 $$
-K_{ij} \sim \operatorname{NB}(\mu_{ij}, \alpha_i), \qquad \mu_{ij} = s_j q_{ij}, \qquad \log_2 q_{ij} = \beta_{i0} + \gamma_{i,p(j)} + \beta_{i1} x_j
+K_{ij} \sim \mathrm{NB}(\mu_{ij}, \alpha_i), \qquad \mu_{ij} = s_j q_{ij}, \qquad \log_2 q_{ij} = \beta_{i0} + \gamma_{i,p(j)} + \beta_{i1} x_j
 $$
 
-$K_{ij}$ is the count of gene $i$ in sample $j$, $s_j$ the sample's size factor, $\alpha_i$ the gene's dispersion, $x_j$ is 1 for tumour and 0 for normal, and $\gamma_{i,p(j)}$ the patient's own level. $\beta_{i1}$ is the log2 fold change within patients, tested by the Wald statistic $\hat\beta_{i1} / \operatorname{SE}(\hat\beta_{i1})$.
+$K_{ij}$ is the count of gene $i$ in sample $j$, $s_j$ the sample's size factor, $\alpha_i$ the gene's dispersion, $x_j$ is 1 for tumour and 0 for normal, and $\gamma_{i,p(j)}$ the patient's own level. $\beta_{i1}$ is the log2 fold change within patients, tested by the Wald statistic $\hat\beta_{i1} / \mathrm{SE}(\hat\beta_{i1})$.
 
 **Beta value, M-value and the moderated t-statistic (methylation).**
 
@@ -268,7 +268,7 @@ $p_{(1)} \le \dots \le p_{(m)}$ are the sorted p-values of the $m$ tests; callin
 **Mutational signatures.**
 
 $$
-\hat e = \underset{e \ge 0}{\operatorname{arg\ min}} \lVert m - S e \rVert^2
+\hat e = \underset{e \ge 0}{\arg\min} \lVert m - S e \rVert^2
 $$
 
 $m$ counts the substitutions in the 96 trinucleotide contexts, $S$ holds the COSMIC signatures as columns, and $\hat e$ is how many substitutions each signature explains (SBS4, tobacco smoke, explains 57% here).
@@ -284,7 +284,7 @@ MOFA writes each layer $Y^{(m)}$ as shared patient factors $Z$ times layer-speci
 **Penalised Cox model (machine learning).**
 
 $$
-\hat\beta = \underset{\beta}{\operatorname{arg\ max}} \ \ell(\beta) - n \lambda \left( \rho \lVert \beta \rVert_1 + \frac{1 - \rho}{2} \lVert \beta \rVert_2^2 \right), \qquad \ell(\beta) = \sum_{i : \delta_i = 1} \left( \beta^\top x_i - \log \sum_{j \in R(t_i)} e^{\beta^\top x_j} \right)
+\hat\beta = \underset{\beta}{\arg\max} \ \ell(\beta) - n \lambda \left( \rho \lVert \beta \rVert_1 + \frac{1 - \rho}{2} \lVert \beta \rVert_2^2 \right), \qquad \ell(\beta) = \sum_{i : \delta_i = 1} \left( \beta^\top x_i - \log \sum_{j \in R(t_i)} e^{\beta^\top x_j} \right)
 $$
 
 $\ell$ is the log partial likelihood ($\delta_i = 1$ if patient $i$ died; $R(t_i)$ the patients still followed then), $\lambda$ the penalty chosen by cross-validation and $\rho = 0.5$ the share of L1.
