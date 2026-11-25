@@ -1,0 +1,31 @@
+Dataset label	B cells	CD4 T cells	CD8 T cells	Cycling cells	Dendritic cells	Endothelial cells	Fibroblasts	LUAD tumour cells	Macrophages	Mast cells	Monocytes	NK cells	Plasma cells	Regulatory T cells
+B cell	2166	0	1	1	0	0	0	0	0	0	0	0	3	0
+CD14-positive monocyte	0	0	0	0	6	0	0	0	45	0	752	0	0	0
+CD14-positive, CD16-positive monocyte	0	0	0	0	0	0	0	0	303	0	175	0	0	0
+CD141-positive myeloid dendritic cell	0	0	0	0	84	0	0	0	0	0	0	0	0	0
+CD38-positive naive B cell	137	0	0	1	0	0	0	0	0	0	0	0	0	0
+CD4-positive type I NK T cell secreting interferon-gamma	0	164	16	0	0	0	0	0	0	0	0	4	0	124
+CD4-positive, CD25-positive, alpha-beta regulatory T cell	0	1031	9	1	0	0	0	0	0	0	0	5	0	1947
+CD4-positive, alpha-beta T cell	0	1339	770	5	1	0	0	0	0	0	0	94	0	379
+CD8-positive, alpha-beta T cell	0	201	3367	0	0	0	0	2	0	0	0	1442	0	106
+CD8-positive, alpha-beta cytotoxic T cell	0	8	174	0	0	0	0	0	0	0	0	598	0	0
+activated CD4-positive, alpha-beta T cell, human	1	2562	581	0	0	0	0	3	0	0	0	0	1	39
+conventional dendritic cell	0	0	0	4	1059	0	0	0	349	1	143	0	1	0
+cycling mononuclear phagocyte	0	0	0	668	34	0	0	0	278	9	2	0	1	0
+endothelial cell	0	0	0	0	0	721	2	0	0	0	0	0	0	0
+epithelial cell of lung	1	10	0	31	0	38	156	12629	0	0	0	0	0	0
+fibroblast of lung	0	0	0	0	0	3	1175	0	0	0	0	0	0	0
+gamma-delta T cell	0	6	107	0	0	0	0	0	0	0	0	217	0	0
+innate lymphoid cell	1	40	95	0	0	0	0	0	0	0	0	103	0	0
+lung macrophage	0	0	0	0	0	0	0	0	655	1	5	0	0	0
+lung pericyte	0	0	0	0	0	22	0	0	0	0	0	0	0	0
+lymphocyte	0	25	26	555	0	0	0	0	0	0	0	87	0	20
+macrophage	10	1	0	0	56	0	0	0	4769	1	203	0	1	0
+mast cell	0	0	0	0	3	0	0	1	12	721	0	0	0	0
+mature NK T cell	0	0	33	0	0	0	0	0	0	0	0	229	0	1
+naive thymus-derived CD4-positive, alpha-beta T cell	0	1894	48	0	0	0	0	0	0	0	0	0	0	20
+naive thymus-derived CD8-positive, alpha-beta T cell	0	236	227	0	0	0	0	0	0	0	0	0	0	5
+natural killer cell	0	0	19	0	0	0	0	0	0	0	0	741	0	0
+neutrophil	0	0	0	0	1	0	0	0	218	1	259	0	0	0
+plasma cell	3	0	0	32	0	0	0	0	0	0	0	0	1311	0
+plasmacytoid dendritic cell	0	0	1	0	2	0	0	0	2	0	0	0	304	0

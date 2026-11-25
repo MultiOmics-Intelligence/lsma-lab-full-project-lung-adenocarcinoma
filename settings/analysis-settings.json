@@ -1,0 +1,947 @@
+{
+ "01_bulk_rnaseq": {
+  "workflow_version": "1.2.0",
+  "parameters": {
+   "input": {
+    "strip_ensembl_version": true,
+    "sample_preparation": {
+     "version": 1,
+     "condition": "tissue",
+     "relabel": {},
+     "groups": [
+      "normal",
+      "tumour"
+     ],
+     "reference": "normal",
+     "excluded": {},
+     "covariates": [
+      "patient"
+     ],
+     "pairing": "patient"
+    }
+   },
+   "count_qc": {
+    "filter_method": "filterByExpr",
+    "group_column": null,
+    "min_count": 10,
+    "min_samples": null,
+    "outlier_mad": 3
+   },
+   "normalisation": {
+    "transformation": "vst"
+   },
+   "exploration": {
+    "color_by": "tissue",
+    "n_top_genes": 500,
+    "batch_column": null,
+    "distance": "euclidean",
+    "linkage": "complete",
+    "n_heatmap_genes": 50
+   },
+   "differential_expression": {
+    "method": "deseq2",
+    "group_column": "tissue",
+    "test_level": "tumour",
+    "reference_level": "normal",
+    "covariates": [
+     "patient"
+    ],
+    "alpha": 0.05,
+    "lfc_threshold": 1,
+    "lfc_shrinkage": "apeglm",
+    "genes_of_interest": [],
+    "p_adjust_method": "BH",
+    "test_lfc_threshold": 0,
+    "independent_filtering": true,
+    "edger_test": "QLF",
+    "voom_quality_weights": false,
+    "subset_to_contrast": false
+   },
+   "enrichment": {
+    "enabled": true,
+    "collections": [
+     "hallmark",
+     "go_bp",
+     "kegg",
+     "reactome"
+    ],
+    "run_ora": true,
+    "run_gsea": true,
+    "padj_cutoff": null,
+    "lfc_cutoff": null,
+    "ranking_metric": "statistic",
+    "min_set_size": 10,
+    "max_set_size": 500,
+    "p_adjust_method": "BH"
+   },
+   "batch_correction": {
+    "enabled": false,
+    "batch_column": null,
+    "protect_column": null,
+    "method": "combat",
+    "n_top_genes": 500
+   },
+   "sample_clustering": {
+    "enabled": false,
+    "max_k": 6,
+    "k": null,
+    "n_top_genes": 2000,
+    "algorithm": "hc",
+    "resamplings": 200,
+    "use_batch_corrected": true
+   },
+   "deconvolution": {
+    "enabled": false,
+    "tumour_samples": true,
+    "group_column": null
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "jsonlite": "2.0.0",
+   "AnnotationDbi": "1.70.0",
+   "Bioconductor": "3.21",
+   "edgeR": "4.6.3",
+   "limma": "3.64.3",
+   "DESeq2": "1.48.2",
+   "apeglm": "1.30.0",
+   "clusterProfiler": "4.16.0",
+   "fgsea": "1.34.2",
+   "msigdbr": "26.1.1"
+  }
+ },
+ "02_single_cell": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "import": {
+    "max_cells": null,
+    "sample_column": "donor_id"
+   },
+   "qc": {
+    "threshold_mode": "mad",
+    "nmads": 5,
+    "nmads_mt": 3,
+    "max_pct_mt": 20,
+    "min_genes": 200,
+    "max_genes": null,
+    "min_counts": null,
+    "max_counts": null,
+    "doublet_method": "scrublet",
+    "remove_doublets": true,
+    "expected_doublet_rate": null,
+    "min_cells_per_gene": 3
+   },
+   "normalisation": {
+    "method": "lognorm",
+    "n_top_genes": 2000,
+    "target_sum": 10000,
+    "hvg_per_sample": true,
+    "regress_out": [],
+    "scale_max": 10
+   },
+   "dimensionality_reduction": {
+    "n_pcs": 30,
+    "n_neighbors": 15,
+    "umap_min_dist": 0.5,
+    "n_pcs_compute": 50,
+    "metric": "euclidean",
+    "umap_spread": 1.0,
+    "tsne_perplexity": 30,
+    "compute_tsne": false
+   },
+   "integration": {
+    "method": "harmony",
+    "batch_key": "sample",
+    "label_key": "author_cell_type_level_1",
+    "harmony_max_iter": 20,
+    "scvi_n_latent": 30,
+    "scvi_max_epochs": null,
+    "enabled": true
+   },
+   "clustering": {
+    "method": "leiden",
+    "resolution": 0.8,
+    "n_markers": 50
+   },
+   "annotation": {
+    "method": "marker_scoring",
+    "manual_labels": {},
+    "export_seurat_rds": false,
+    "marker_panel": "blood_immune",
+    "custom_markers": "LUAD tumour cells: NKX2-1, NAPSA, SFTPB, CEACAM6, EPCAM, KRT8; CD8 T cells: CD8A, CD8B, GZMK, CD3E; CD4 T cells: CD3E, CD4, IL7R, CD40LG; Regulatory T cells: FOXP3, IL2RA, CTLA4, CD3E; NK cells: NKG7, GNLY, KLRD1, KLRF1; B cells: MS4A1, CD79A, CD19, BANK1; Plasma cells: JCHAIN, MZB1, IGKC, CD79A; Macrophages: CD68, C1QA, C1QB, APOE, CD163; Monocytes: S100A8, S100A9, FCN1, LYZ, VCAN; Dendritic cells: CLEC9A, FCER1A, CD1C, LAMP3; Mast cells: TPSAB1, CPA3, KIT, MS4A2; Endothelial cells: PECAM1, VWF, CLDN5, CDH5; Fibroblasts: COL1A1, COL1A2, DCN, LUM; Cycling cells: MKI67, TOP2A, CENPF, UBE2C"
+   },
+   "differential_expression": {
+    "comparison": "pseudobulk_condition",
+    "group_by": "cell_type",
+    "test_level": "Solid",
+    "reference_level": "A/P",
+    "sample_column": "sample",
+    "covariates": [],
+    "group_a": null,
+    "group_b": null,
+    "groups": [],
+    "min_cells": 10,
+    "alpha": 0.05,
+    "enabled": true,
+    "condition_column": "luad_histologic_subtype"
+   },
+   "interpretation": {
+    "enabled": true,
+    "source": "markers",
+    "collections": [
+     "hallmark"
+    ],
+    "run_ora": true,
+    "run_gsea": false,
+    "score_collection": "hallmark",
+    "gsea_on_markers": false,
+    "padj_cutoff": 0.05,
+    "lfc_cutoff": 1,
+    "min_set_size": 10,
+    "max_set_size": 500
+   },
+   "advanced": {
+    "enabled": true,
+    "modules": [
+     "cell_cycle",
+     "trajectory",
+     "differential_abundance",
+     "communication",
+     "tf_activity"
+    ],
+    "root_group": "CD14-positive monocyte",
+    "condition_column": "luad_histologic_subtype",
+    "test_level": "Solid",
+    "reference_level": "A/P",
+    "communication_permutations": 100
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scanpy": "1.12.5",
+   "anndata": "0.13.4",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "2.3.3",
+   "scikit-learn": "1.9.1",
+   "h5py": "3.16.0",
+   "scrublet": "0.2.3",
+   "scikit-misc": "0.5.3",
+   "umap-learn": "0.6.0",
+   "pynndescent": "0.7.0",
+   "harmonypy": "2.1.0",
+   "leidenalg": "0.12.0",
+   "igraph": "1.0.0",
+   "DESeq2 (R)": "1.48.2",
+   "edgeR (R)": "4.6.3",
+   "apeglm (R)": "1.30.0",
+   "R": "4.5.2",
+   "clusterProfiler (R)": "4.16.0",
+   "fgsea (R)": "1.34.2",
+   "msigdbr (R)": "26.1.1",
+   "liana": "2.1.1"
+  }
+ },
+ "03_dna_methylation": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "sample_preparation": {
+     "version": 1,
+     "condition": "tissue",
+     "relabel": {},
+     "groups": [
+      "normal",
+      "tumour"
+     ],
+     "reference": "normal",
+     "excluded": {},
+     "covariates": [
+      "patient"
+     ],
+     "pairing": "patient"
+    }
+   },
+   "qc": {
+    "remove_sex_chromosomes": true,
+    "remove_snp_probes": true,
+    "max_missing_fraction": 0,
+    "max_failed_fraction": 0.05,
+    "snp_maf": 0.01,
+    "remove_non_cpg": true,
+    "outlier_mad": 3,
+    "group_column": null
+   },
+   "exploration": {
+    "n_top_probes": 5000,
+    "color_by": null,
+    "n_heatmap_probes": 50,
+    "linkage": "complete"
+   },
+   "differential_methylation": {
+    "group_column": "tissue",
+    "test_level": "tumour",
+    "reference_level": "normal",
+    "covariates": [
+     "patient"
+    ],
+    "alpha": 0.05,
+    "delta_beta": 0.1,
+    "p_adjust_method": "BH",
+    "robust": false,
+    "subset_to_contrast": false
+   },
+   "regions": {
+    "enabled": true,
+    "min_cpgs": 3,
+    "min_mean_delta": 0.05,
+    "fdr": null,
+    "lambda": 1000,
+    "C": 2,
+    "n_region_plots": 3
+   },
+   "enrichment": {
+    "enabled": true,
+    "collections": [
+     "hallmark",
+     "go_bp"
+    ],
+    "directions": [
+     "hyper",
+     "hypo"
+    ],
+    "cpg_location": "all",
+    "max_cpgs": 10000,
+    "padj_cutoff": 0.05,
+    "min_set_size": 10,
+    "max_set_size": 500
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "jsonlite": "2.0.0",
+   "data.table": "1.18.6.1",
+   "IlluminaHumanMethylation450kanno.ilmn12.hg19": "0.6.1",
+   "Bioconductor": "3.21",
+   "matrixStats": "1.5.0",
+   "limma": "3.64.3",
+   "DMRcate": "3.4.1",
+   "missMethyl": "1.42.0",
+   "msigdbr": "26.1.1",
+   "org.Hs.eg.db": "3.21.0"
+  }
+ },
+ "04_mutations": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "genome": "hg38"
+   },
+   "variant_qc": {
+    "min_vaf": 0,
+    "min_depth": 0,
+    "capture_size_mb": 38
+   },
+   "landscape": {
+    "n_genes": 20,
+    "annotate_by": null,
+    "genes_of_interest": [
+     "KRAS",
+     "EGFR",
+     "TP53",
+     "STK11",
+     "KEAP1",
+     "SMARCA4"
+    ],
+    "n_interaction_genes": 25,
+    "min_mutated_samples": 5
+   },
+   "signatures": {
+    "enabled": true,
+    "min_substitutions_per_sample": 50,
+    "max_delta": 0.004
+   },
+   "comparison": {
+    "enabled": true,
+    "group_column": "vital_status",
+    "test_level": "Dead",
+    "reference_level": "Alive",
+    "reference_is_everyone_else": false,
+    "min_mutated_samples": 5,
+    "alpha": 0.05,
+    "p_adjust_method": "BH"
+   },
+   "copy_number": {
+    "enabled": true,
+    "gain_log2": 0.2,
+    "loss_log2": -0.2,
+    "min_markers": 10,
+    "bin_mb": 2,
+    "include_sex_chromosomes": false
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "maftools": "2.24.0",
+   "data.table": "1.18.6.1",
+   "Bioconductor": "3.21",
+   "MutationalPatterns": "3.18.0",
+   "BSgenome.Hsapiens.UCSC.hg38": "1.4.5",
+   "GenomeInfoDb": "1.44.3",
+   "TxDb.Hsapiens.UCSC.hg38.knownGene": "3.21.0"
+  }
+ },
+ "05_integration": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "max_features": 2000,
+    "min_carriers": 5,
+    "remove_sex_chromosomes": true
+   },
+   "exploration": {
+    "permutations": 499,
+    "color_by": "stage"
+   },
+   "associations": {
+    "n_top": 100,
+    "alpha": 0.05
+   },
+   "factors": {
+    "enabled": true,
+    "n_factors": 8,
+    "min_variance_explained": 1,
+    "convergence": "fast",
+    "n_factors_shown": 3
+   },
+   "clustering": {
+    "enabled": true,
+    "n_clusters": null,
+    "compare_column": "stage",
+    "time_column": "survival_days",
+    "event_column": "vital_status",
+    "event_value": "Dead",
+    "neighbours": 20,
+    "sigma": 0.5,
+    "iterations": 20
+   },
+   "supervised": {
+    "enabled": true,
+    "group_column": "vital_status",
+    "n_components": 2,
+    "features_per_layer": 15,
+    "link_between_layers": 0.1,
+    "folds": 5,
+    "repeats": 10,
+    "permutations": 50
+   },
+   "comparison": {
+    "enabled": true,
+    "n_clusters": null,
+    "compare_column": "vital_status",
+    "include_rgcca": true
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "data.table": "1.18.6.1",
+   "jsonlite": "2.0.0",
+   "Bioconductor": "3.21",
+   "MOFA2": "1.18.0",
+   "reticulate": "1.47.0",
+   "mofapy2": "0.7.5",
+   "SNFtool": "2.3.1",
+   "cluster": "2.1.8.1",
+   "survival": "3.8.3",
+   "mixOmics": "6.32.0"
+  }
+ },
+ "05_integration_robustness_1000_features": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "min_carriers": 5,
+    "remove_sex_chromosomes": true,
+    "max_features": 1000
+   },
+   "exploration": {
+    "color_by": "stage",
+    "permutations": 499
+   },
+   "associations": {
+    "n_top": 100,
+    "alpha": 0.05
+   },
+   "factors": {
+    "enabled": true,
+    "n_factors": 8,
+    "min_variance_explained": 1,
+    "convergence": "fast",
+    "n_factors_shown": 3
+   },
+   "clustering": {
+    "enabled": true,
+    "n_clusters": null,
+    "compare_column": "stage",
+    "event_column": "vital_status",
+    "neighbours": 20,
+    "sigma": 0.5,
+    "iterations": 20,
+    "event_value": "Dead",
+    "time_column": "survival_days"
+   },
+   "supervised": {
+    "enabled": true,
+    "n_components": 2,
+    "features_per_layer": 15,
+    "link_between_layers": 0.1,
+    "folds": 5,
+    "repeats": 10,
+    "permutations": 50,
+    "group_column": "vital_status"
+   },
+   "comparison": {
+    "enabled": true,
+    "n_clusters": null,
+    "compare_column": "vital_status",
+    "include_rgcca": true
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "data.table": "1.18.6.1",
+   "jsonlite": "2.0.0",
+   "Bioconductor": "3.21",
+   "MOFA2": "1.18.0",
+   "reticulate": "1.47.0",
+   "mofapy2": "0.7.5",
+   "SNFtool": "2.3.1",
+   "cluster": "2.1.8.1",
+   "survival": "3.8.3",
+   "mixOmics": "6.32.0"
+  }
+ },
+ "06_survival_model": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "model_run": null,
+    "outcome_column": null,
+    "positive_class": null,
+    "negative_class": null,
+    "time_column": "survival_days",
+    "event_column": "vital_status",
+    "event_value": "Dead",
+    "group_column": null,
+    "subset_column": null,
+    "subset_value": null,
+    "max_features_loaded": 20000,
+    "task": "survival"
+   },
+   "training": {
+    "models": [
+     "logistic_regression",
+     "random_forest",
+     "svm"
+    ],
+    "survival_feature_choice": "association",
+    "n_features": 200,
+    "test_fraction": 0.25,
+    "cv_folds": 5,
+    "tune": true,
+    "cv_repeats": 2,
+    "n_permutations": 100
+   },
+   "evaluation": {},
+   "explanation": {
+    "n_top_features": 20,
+    "n_repeats": 20
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "pandas": "2.3.3",
+   "scipy": "1.18.1",
+   "lifelines": "0.30.3",
+   "joblib": "1.6.0"
+  }
+ },
+ "06_survival_model_variance_genes": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "task": "survival",
+    "model_run": null,
+    "outcome_column": null,
+    "positive_class": null,
+    "negative_class": null,
+    "time_column": "survival_days",
+    "event_column": "vital_status",
+    "event_value": "Dead",
+    "group_column": null,
+    "subset_column": null,
+    "subset_value": null,
+    "max_features_loaded": 20000
+   },
+   "training": {
+    "models": [
+     "logistic_regression",
+     "random_forest",
+     "svm"
+    ],
+    "survival_feature_choice": "variance",
+    "n_features": 200,
+    "test_fraction": 0.25,
+    "cv_folds": 5,
+    "tune": true,
+    "cv_repeats": 2,
+    "n_permutations": 100
+   },
+   "evaluation": {},
+   "explanation": {
+    "n_top_features": 20,
+    "n_repeats": 20
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "pandas": "2.3.3",
+   "scipy": "1.18.1",
+   "lifelines": "0.30.3",
+   "joblib": "1.6.0"
+  }
+ },
+ "06_stage_model": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "task": "classification",
+    "outcome_column": "stage",
+    "positive_class": "Stage III",
+    "negative_class": "Stage I",
+    "time_column": null,
+    "event_column": null,
+    "event_value": null,
+    "group_column": null,
+    "subset_column": null,
+    "subset_value": null,
+    "max_features_loaded": 20000
+   },
+   "training": {
+    "models": [
+     "logistic_regression",
+     "lasso",
+     "elastic_net",
+     "random_forest",
+     "svm",
+     "hist_gradient_boosting"
+    ],
+    "n_features": 200,
+    "test_fraction": 0.25,
+    "cv_folds": 5,
+    "tune": true,
+    "cv_repeats": 2,
+    "n_permutations": 100
+   },
+   "evaluation": {},
+   "explanation": {
+    "n_top_features": 20,
+    "n_repeats": 20
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "pandas": "2.3.3",
+   "scipy": "1.18.1",
+   "lifelines": "0.30.3",
+   "joblib": "1.6.0"
+  }
+ },
+ "validation_uppsala_bulk": {
+  "workflow_version": "1.2.0",
+  "parameters": {
+   "input": {
+    "strip_ensembl_version": true,
+    "sample_preparation": {
+     "version": 1,
+     "condition": "tissue",
+     "relabel": {},
+     "groups": [
+      "normal",
+      "tumour"
+     ],
+     "reference": "normal",
+     "excluded": {},
+     "covariates": [],
+     "pairing": null
+    }
+   },
+   "count_qc": {
+    "filter_method": "filterByExpr",
+    "group_column": null,
+    "min_count": 10,
+    "min_samples": null,
+    "outlier_mad": 3
+   },
+   "normalisation": {
+    "transformation": "vst"
+   },
+   "exploration": {
+    "color_by": "tissue",
+    "n_top_genes": 500,
+    "batch_column": null,
+    "distance": "euclidean",
+    "linkage": "complete",
+    "n_heatmap_genes": 50
+   },
+   "differential_expression": {
+    "method": "deseq2",
+    "group_column": "tissue",
+    "test_level": "tumour",
+    "reference_level": "normal",
+    "covariates": [],
+    "alpha": 0.05,
+    "lfc_threshold": 1,
+    "lfc_shrinkage": "apeglm",
+    "genes_of_interest": [],
+    "p_adjust_method": "BH",
+    "test_lfc_threshold": 0,
+    "independent_filtering": true,
+    "edger_test": "QLF",
+    "voom_quality_weights": false,
+    "subset_to_contrast": false
+   },
+   "enrichment": {
+    "enabled": true,
+    "collections": [
+     "hallmark"
+    ],
+    "run_ora": true,
+    "run_gsea": true,
+    "padj_cutoff": null,
+    "lfc_cutoff": null,
+    "ranking_metric": "statistic",
+    "min_set_size": 10,
+    "max_set_size": 500,
+    "p_adjust_method": "BH"
+   },
+   "batch_correction": {
+    "enabled": false,
+    "batch_column": null,
+    "protect_column": null,
+    "method": "combat",
+    "n_top_genes": 500
+   },
+   "sample_clustering": {
+    "enabled": false,
+    "max_k": 6,
+    "k": null,
+    "n_top_genes": 2000,
+    "algorithm": "hc",
+    "resamplings": 200,
+    "use_batch_corrected": true
+   },
+   "deconvolution": {
+    "enabled": false,
+    "tumour_samples": true,
+    "group_column": null
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "jsonlite": "2.0.0",
+   "AnnotationDbi": "1.70.0",
+   "Bioconductor": "3.21",
+   "edgeR": "4.6.3",
+   "limma": "3.64.3",
+   "DESeq2": "1.48.2",
+   "apeglm": "1.30.0",
+   "clusterProfiler": "4.16.0",
+   "fgsea": "1.34.2",
+   "msigdbr": "26.1.1"
+  }
+ },
+ "validation_oslo_methylation": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "sample_preparation": {
+     "version": 1,
+     "condition": "tissue",
+     "relabel": {},
+     "groups": [
+      "normal",
+      "tumour"
+     ],
+     "reference": "normal",
+     "excluded": {},
+     "covariates": [],
+     "pairing": null
+    }
+   },
+   "qc": {
+    "remove_sex_chromosomes": true,
+    "remove_snp_probes": true,
+    "max_missing_fraction": 0,
+    "max_failed_fraction": 0.05,
+    "snp_maf": 0.01,
+    "remove_non_cpg": true,
+    "outlier_mad": 3,
+    "group_column": null
+   },
+   "exploration": {
+    "n_top_probes": 5000,
+    "color_by": null,
+    "n_heatmap_probes": 50,
+    "linkage": "complete"
+   },
+   "differential_methylation": {
+    "group_column": "tissue",
+    "test_level": "tumour",
+    "reference_level": "normal",
+    "covariates": [],
+    "alpha": 0.05,
+    "delta_beta": 0.1,
+    "p_adjust_method": "BH",
+    "robust": false,
+    "subset_to_contrast": false
+   },
+   "regions": {
+    "enabled": false,
+    "min_cpgs": 3,
+    "min_mean_delta": 0.05,
+    "fdr": null,
+    "lambda": 1000,
+    "C": 2,
+    "n_region_plots": 3
+   },
+   "enrichment": {
+    "enabled": true,
+    "collections": [
+     "hallmark"
+    ],
+    "directions": [
+     "hyper",
+     "hypo"
+    ],
+    "cpg_location": "all",
+    "max_cpgs": 10000,
+    "padj_cutoff": 0.05,
+    "min_set_size": 10,
+    "max_set_size": 500
+   }
+  },
+  "software_versions": {
+   "R": "4.5.2",
+   "jsonlite": "2.0.0",
+   "data.table": "1.18.6.1",
+   "IlluminaHumanMethylation450kanno.ilmn12.hg19": "0.6.1",
+   "Bioconductor": "3.21",
+   "matrixStats": "1.5.0",
+   "limma": "3.64.3",
+   "missMethyl": "1.42.0",
+   "msigdbr": "26.1.1",
+   "org.Hs.eg.db": "3.21.0"
+  }
+ },
+ "validation_uppsala_frozen_survival_model": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "task": "prediction",
+    "model_run": "f1965918-8972-402c-82aa-e612c5e1f728",
+    "outcome_column": null,
+    "positive_class": null,
+    "negative_class": null,
+    "time_column": "survival_days",
+    "event_column": "vital_status",
+    "event_value": "Dead",
+    "group_column": null,
+    "max_features_loaded": 20000,
+    "subset_column": "tissue",
+    "subset_value": "tumour"
+   },
+   "training": {
+    "models": [
+     "logistic_regression",
+     "random_forest",
+     "svm"
+    ],
+    "survival_feature_choice": "association",
+    "n_features": 200,
+    "test_fraction": 0.25,
+    "cv_folds": 5,
+    "tune": true,
+    "cv_repeats": 2,
+    "n_permutations": 100
+   },
+   "evaluation": {},
+   "explanation": {
+    "n_top_features": 20,
+    "n_repeats": 20
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "pandas": "2.3.3",
+   "scipy": "1.18.1",
+   "lifelines": "0.30.3",
+   "joblib": "1.6.0"
+  }
+ },
+ "validation_uppsala_frozen_stage_model": {
+  "workflow_version": "1.0.0",
+  "parameters": {
+   "input": {
+    "task": "prediction",
+    "model_run": "52cf7e4d-cc46-4eca-a142-c7f542b361ae",
+    "outcome_column": "stage",
+    "positive_class": "Stage III",
+    "negative_class": "Stage I",
+    "time_column": null,
+    "event_column": null,
+    "event_value": null,
+    "group_column": null,
+    "subset_column": null,
+    "subset_value": null,
+    "max_features_loaded": 20000
+   },
+   "training": {
+    "models": [
+     "logistic_regression",
+     "random_forest",
+     "svm"
+    ],
+    "survival_feature_choice": "association",
+    "n_features": 200,
+    "test_fraction": 0.25,
+    "cv_folds": 5,
+    "tune": true,
+    "cv_repeats": 2,
+    "n_permutations": 100
+   },
+   "evaluation": {},
+   "explanation": {
+    "n_top_features": 20,
+    "n_repeats": 20
+   }
+  },
+  "software_versions": {
+   "python": "3.12.16",
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "pandas": "2.3.3",
+   "scipy": "1.18.1",
+   "lifelines": "0.30.3",
+   "joblib": "1.6.0"
+  }
+ }
+}

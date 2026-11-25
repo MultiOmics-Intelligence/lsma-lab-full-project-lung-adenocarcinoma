@@ -1,0 +1,6 @@
+metric	value	meaning
+Concordance index	0.4928	Share of comparable patient pairs the frozen model ranks correctly; 0.5 is guessing
+Concordance index, lower end of the 95% interval	0.3951	From 1,000 bootstrap resamples of the new patients
+Concordance index, upper end of the 95% interval	0.5957	
+Cross-validated concordance index in the source run	0.6251	What the model scored on its own training data, for comparison
+Log-rank p-value, high against low risk	0.0555	Whether the two predicted risk groups differ in survival

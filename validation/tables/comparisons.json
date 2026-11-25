@@ -1,0 +1,35 @@
+{
+ "bulk": {
+  "genes_both": 17234,
+  "strong_tcga": 4072,
+  "same_direction": 3883,
+  "pct_same": 95.4,
+  "same_dir_and_sig_upp": 3544,
+  "pct_replicated": 87.0,
+  "rho_all": 0.847,
+  "rho_strong": 0.878
+ },
+ "methylation": {
+  "cpgs_both": 361343,
+  "called_tcga": 70005,
+  "pct_same": 96.5,
+  "pct_replicated": 64.9,
+  "rho_called": 0.864
+ },
+ "meth_vs_expr": {
+  "genes": 3728,
+  "rho": -0.254,
+  "pct_opposite": 62.2,
+  "binom_p": 1.7451006061546914e-50
+ },
+ "mutations": {
+  "luad_broad": {
+   "n": 183,
+   "rho": 0.943
+  },
+  "luad_oncosg_2020": {
+   "n": 302,
+   "rho": 0.785
+  }
+ }
+}

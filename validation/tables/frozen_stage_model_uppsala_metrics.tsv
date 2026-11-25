@@ -1,0 +1,9 @@
+metric	value	meaning
+ROC AUC	0.5981	How well the frozen model ranks positive above negative samples of the new dataset; 0.5 is guessing, 1 is perfect
+ROC AUC, lower end of the 95% interval	0.4589	From 1,000 bootstrap resamples of the new samples
+ROC AUC, upper end of the 95% interval	0.7364	
+Balanced accuracy	0.5753	Mean of sensitivity and specificity at the threshold of 0.5
+Sensitivity (recall of 'Stage III')	0.1667	Share of 'Stage III' samples the model finds
+Specificity (recall of 'Stage I')	0.9839	Share of 'Stage I' samples the model leaves alone
+Accuracy	0.7558	Share of samples classified correctly at a probability threshold of 0.5
+Cross-validated ROC AUC in the source run	0.642	What the model scored on its own training data, for comparison

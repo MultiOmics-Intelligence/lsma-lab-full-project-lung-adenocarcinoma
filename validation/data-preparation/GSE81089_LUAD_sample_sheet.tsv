@@ -1,0 +1,128 @@
+sample_id	patient	tissue	stage	vital_status	survival_days	gender	age	smoking	histology
+GSM2142443	L400	tumour	Stage II	Dead	1233	male	78	never	adenocarcinoma
+GSM2142444	L401	tumour	Stage III	Dead	1888	male	74	former	adenocarcinoma
+GSM2142445	L404	tumour	Stage II	Dead	2318	female	74	former	adenocarcinoma
+GSM2142447	L413	tumour	Stage III	Dead	635	female	72	former	adenocarcinoma
+GSM2142451	L439	tumour	Stage II	Alive	2594	male	80	former	adenocarcinoma
+GSM2142452	L440	tumour	Stage II	Dead	651	male	80	former	adenocarcinoma
+GSM2142456	L446	tumour	Stage II	Dead	415	female	71	former	adenocarcinoma
+GSM2142459	L455	tumour	Stage I	Alive	2570	female	52	current	adenocarcinoma
+GSM2142462	L458	tumour	Stage I	Dead	223	female	76	current	adenocarcinoma
+GSM2142464	L462	tumour	Stage III	Dead	568	male	67	former	adenocarcinoma
+GSM2142471	L473	tumour	Stage I	Alive	2294	female	66	current	adenocarcinoma
+GSM2142473	L481	tumour	Stage I	Alive	2047	female	70	current	adenocarcinoma
+GSM2142475	L484	tumour	Stage I	Alive	2168	female	64	former	adenocarcinoma
+GSM2142478	L493	tumour	Stage II	Alive	2218	female	56	current	adenocarcinoma
+GSM2142480	L504	tumour	Stage I	Dead	1295	female	65	former	adenocarcinoma
+GSM2142481	L511	tumour	Stage III	Alive	2215	female	56	never	adenocarcinoma
+GSM2142483	L530	tumour	Stage II	Dead	308	female	76	current	adenocarcinoma
+GSM2142484	L531	tumour	Stage I	Dead	928	male	74	former	adenocarcinoma
+GSM2142490	L541	tumour	Stage III	Dead	915	female	70	never	adenocarcinoma
+GSM2142491	L543	tumour	Stage I	Alive	1984	male	65	current	adenocarcinoma
+GSM2142492	L545	tumour	Stage I	Alive	2147	female	60	never	adenocarcinoma
+GSM2142493	L546	tumour	Stage I	Dead	973	male	57	former	adenocarcinoma
+GSM2142494	L551	tumour	Stage I	Alive	2197	male	62	current	adenocarcinoma
+GSM2142495	L557	tumour	Stage I	Alive	1853	female	81	never	adenocarcinoma
+GSM2142497	L561	tumour	Stage I	Alive	1816	female	62	current	adenocarcinoma
+GSM2142499	L565	tumour	Stage I	Dead	543	female	59	former	adenocarcinoma
+GSM2142500	L566	tumour	Stage I	Alive	1762	male	58	former	adenocarcinoma
+GSM2142501	L567	tumour	Stage III	Dead	1299	female	83	never	adenocarcinoma
+GSM2142503	L569	tumour	Stage I	Alive	1804	female	76	former	adenocarcinoma
+GSM2142507	L584	tumour	Stage I	Dead	0	male	74	former	adenocarcinoma
+GSM2142508	L585	tumour	Stage II	Dead	402	female	70	former	adenocarcinoma
+GSM2142511	L593	tumour	Stage I	Alive	1874	male	78	current	adenocarcinoma
+GSM2142512	L596	tumour	Stage I	Alive	1592	female	74	former	adenocarcinoma
+GSM2142514	L599	tumour	Stage I	Alive	1837	male	80	former	adenocarcinoma
+GSM2142515	L601	tumour	Stage I	Alive	1557	male	75	current	adenocarcinoma
+GSM2142516	L602	tumour	Stage I	Alive	1550	female	69	current	adenocarcinoma
+GSM2142517	L603	tumour	Stage I	Dead	972	female	70	former	adenocarcinoma
+GSM2142519	L605	tumour	Stage I	Alive	1733	female	74	current	adenocarcinoma
+GSM2142520	L606	tumour	Stage I	Alive	1609	male	55	former	adenocarcinoma
+GSM2142521	L607	tumour	Stage I	Alive	1845	male	59	former	adenocarcinoma
+GSM2142522	L608	tumour	Stage I	Alive	1623	male	73	former	adenocarcinoma
+GSM2142523	L612	tumour	Stage III	Alive	1683	female	80	former	adenocarcinoma
+GSM2142524	L613	tumour	Stage III	Dead	19	male	72	current	adenocarcinoma
+GSM2142525	L616	tumour	Stage I	Dead	410	male	54	current	adenocarcinoma
+GSM2142526	L617	tumour	Stage III	Dead	238	male	68	former	adenocarcinoma
+GSM2142527	L619	tumour	Stage III	Alive	1571	female	68	former	adenocarcinoma
+GSM2142528	L620	tumour	Stage III	Dead	338	female	70	current	adenocarcinoma
+GSM2142529	L621	tumour	Stage III	Dead	1487	female	79	former	adenocarcinoma
+GSM2142530	L626	tumour	Stage I	Alive	1594	female	76	current	adenocarcinoma
+GSM2142532	L630	tumour	Stage I	Alive	1474	female	65	current	adenocarcinoma
+GSM2142535	L638	tumour	Stage I	Alive	1349	male	65	former	adenocarcinoma
+GSM2142541	L656	tumour	Stage I	Alive	1500	male	58	current	adenocarcinoma
+GSM2142544	L662	tumour	Stage I	Dead	865	male	66	former	adenocarcinoma
+GSM2142545	L663	tumour	Stage I	Alive	1291	female	62	current	adenocarcinoma
+GSM2142547	L673	tumour	Stage I	Dead	568	female	74	former	adenocarcinoma
+GSM2142548	L678	tumour	Stage I	Dead	1114	female	65	former	adenocarcinoma
+GSM2142549	L682	tumour	Stage II	Dead	840	female	64	former	adenocarcinoma
+GSM2142550	L683	tumour	Stage II	Dead	612	female	77	current	adenocarcinoma
+GSM2142552	L688	tumour	Stage III	Dead	789	male	57	current	adenocarcinoma
+GSM2142553	L689	tumour	Stage I	Alive	1216	male	69	never	adenocarcinoma
+GSM2142554	L695	tumour	Stage I	Alive	1399	female	68	never	adenocarcinoma
+GSM2142555	L703	tumour	Stage II	Dead	1137	male	71	current	adenocarcinoma
+GSM2142556	L710	tumour	Stage II	Alive	1048	female	72	former	adenocarcinoma
+GSM2142562	L725	tumour	Stage I	Alive	1103	female	64	current	adenocarcinoma
+GSM2142563	L728	tumour	Stage II	Alive	1108	male	77	former	adenocarcinoma
+GSM2142564	L731	tumour	Stage I	Dead	964	female	59	former	adenocarcinoma
+GSM2142565	L735	tumour	Stage I	Alive	1103	female	75	current	adenocarcinoma
+GSM2142567	L738	tumour	Stage I	Alive	1097	female	74	former	adenocarcinoma
+GSM2142571	L746	tumour	Stage III	Dead	594	female	64	current	adenocarcinoma
+GSM2142573	L749	tumour	Stage III	Dead	189	female	49	current	adenocarcinoma
+GSM2142575	L752	tumour	Stage III	Alive	920	male	65	former	adenocarcinoma
+GSM2142581	L764	tumour	Stage III	Alive	957	male	66	former	adenocarcinoma
+GSM2142582	L766	tumour	Stage I	Alive	1066	male	59	former	adenocarcinoma
+GSM2142584	L768	tumour	Stage III	Dead	472	male	60	former	adenocarcinoma
+GSM2142585	L771	tumour	Stage I	Alive	930	female	68	current	adenocarcinoma
+GSM2142586	L773	tumour	Stage IV	Dead	311	female	64	former	adenocarcinoma
+GSM2142587	L778	tumour	Stage I	Alive	873	female	65	former	adenocarcinoma
+GSM2142589	L782	tumour	Stage II	Alive	2626	female	73	former	adenocarcinoma
+GSM2142592	L791	tumour	Stage III	Dead	368	female	66	current	adenocarcinoma
+GSM2142593	L800	tumour	Stage I	Alive	1954	female	66	current	adenocarcinoma
+GSM2142594	L802	tumour	Stage I	Dead	773	female	62	current	adenocarcinoma
+GSM2142595	L808	tumour	Stage I	Alive	2256	female	48	former	adenocarcinoma
+GSM2142597	L810	tumour	Stage III	Dead	625	female	64	current	adenocarcinoma
+GSM2142598	L814	tumour	Stage III	Alive	1721	male	73	former	adenocarcinoma
+GSM2142600	L816	tumour	Stage II	Dead	353	female	73	former	adenocarcinoma
+GSM2142605	L826	tumour	Stage IV	Dead	935	female	45	never	adenocarcinoma
+GSM2142606	L827	tumour	Stage II	Dead	1105	male	70	former	adenocarcinoma
+GSM2142607	L828	tumour	Stage II	Alive	1477	female	68	never	adenocarcinoma
+GSM2142608	L829	tumour	Stage I	Alive	1428	male	76	never	adenocarcinoma
+GSM2142609	L831	tumour	Stage I	Alive	1407	female	62	current	adenocarcinoma
+GSM2142610	L832	tumour	Stage I	Alive	1400	female	65	former	adenocarcinoma
+GSM2142612	L838	tumour	Stage I	Dead	1005	female	71	current	adenocarcinoma
+GSM2142613	L842	tumour	Stage I	Alive	1260	female	62	former	adenocarcinoma
+GSM2142615	L850	tumour	Stage III	Dead	997	male	77	current	adenocarcinoma
+GSM2142616	L851	tumour	Stage I	Dead	1315	male	70	former	adenocarcinoma
+GSM2142625	L865	tumour	Stage II	Alive	1182	female	75	current	adenocarcinoma
+GSM2142626	L867	tumour	Stage III	Dead	317	female	62	current	adenocarcinoma
+GSM2142627	L871	tumour	Stage I	Dead	873	male	74	former	adenocarcinoma
+GSM2142628	L872	tumour	Stage I	Alive	1048	female	71	former	adenocarcinoma
+GSM2142629	L873	tumour	Stage I	Alive	995	female	62	current	adenocarcinoma
+GSM2142630	L874	tumour	Stage III	Alive	988	female	56	current	adenocarcinoma
+GSM2142631	L875	tumour	Stage I	Alive	930	female	69	current	adenocarcinoma
+GSM2142633	L877	tumour	Stage I	Alive	854	female	70	current	adenocarcinoma
+GSM2142634	L879	tumour	Stage IV	Dead	873	male	75	current	adenocarcinoma
+GSM2142635	L880	tumour	Stage I	Alive	1022	female	75	current	adenocarcinoma
+GSM2142638	L885	tumour	Stage I	Alive	873	female	62	current	adenocarcinoma
+GSM2142640	L887	tumour	Stage I	Dead	374	male	77	former	adenocarcinoma
+GSM2142641	L890	tumour	Stage II	Dead	1264	female	56	current	adenocarcinoma
+GSM2142642	L511	normal							normal lung
+GSM2142643	L532	normal							normal lung
+GSM2142644	L561	normal							normal lung
+GSM2142645	L563	normal							normal lung
+GSM2142646	L566	normal							normal lung
+GSM2142647	L572	normal							normal lung
+GSM2142648	L606	normal							normal lung
+GSM2142649	L616	normal							normal lung
+GSM2142650	L644	normal							normal lung
+GSM2142651	L656	normal							normal lung
+GSM2142652	L661	normal							normal lung
+GSM2142653	L682	normal							normal lung
+GSM2142654	L723	normal							normal lung
+GSM2142655	L724	normal							normal lung
+GSM2142656	L736	normal							normal lung
+GSM2142657	L738	normal							normal lung
+GSM2142658	L809	normal							normal lung
+GSM2142659	L831	normal							normal lung
+GSM2142660	L881	normal							normal lung

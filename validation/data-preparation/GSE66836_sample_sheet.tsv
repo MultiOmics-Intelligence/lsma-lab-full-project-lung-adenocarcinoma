@@ -1,0 +1,184 @@
+sample_id	title	tissue	gender	stage	egfr	kras	tp53
+GSM1632880	Sample1_Tumor	tumour	female	Stage I	NA	WildType	NA
+GSM1632881	Sample2_Normal	normal	male		NA	NA	NA
+GSM1632882	Sample3_Tumor	tumour	male	Stage II	WildType	WildType	NA
+GSM1632883	Sample4_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632884	Sample5_Normal	normal	female		NA	NA	NA
+GSM1632885	Sample6_Tumor	tumour	female	Stage I	Mutated	WildType	WildType
+GSM1632886	Sample7_Tumor	tumour	female	Stage III	WildType	Mutated	WildType
+GSM1632887	Sample8_Tumor	tumour	female	Stage I	WildType	Mutated	Mutated
+GSM1632888	Sample9_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632889	Sample10_Tumor	tumour	female	Stage II	WildType	NA	WildType
+GSM1632890	Sample11_Tumor	tumour	female	Stage III	Mutated	WildType	WildType
+GSM1632891	Sample12_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1632892	Sample13_Tumor	tumour	male	Stage III	WildType	Mutated	WildType
+GSM1632893	Sample14_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632894	Sample15_Tumor	tumour	male	Stage II	WildType	WildType	Mutated
+GSM1632895	Sample16_Tumor	tumour	female	Stage I	WildType	NA	WildType
+GSM1632896	Sample17_Tumor	tumour	male	Stage I	WildType	NA	WildType
+GSM1632897	Sample18_Tumor	tumour	male	Stage I	WildType	WildType	NA
+GSM1632898	Sample19_Tumor	tumour	male	Stage I	WildType	NA	WildType
+GSM1632899	Sample20_Tumor	tumour	female	Stage II	WildType	NA	WildType
+GSM1632900	Sample21_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632901	Sample22_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632902	Sample23_Tumor	tumour	female	Stage II	Mutated	WildType	WildType
+GSM1632903	Sample24_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632904	Sample25_Tumor	tumour	male	Stage I	WildType	Mutated	Mutated
+GSM1632905	Sample26_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632906	Sample27_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632907	Sample28_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632908	Sample29_Tumor	tumour	female	Stage II	WildType	Mutated	WildType
+GSM1632909	Sample30_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632910	Sample31_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632911	Sample32_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1632912	Sample33_Tumor	tumour	female	Stage II	WildType	Mutated	NA
+GSM1632913	Sample34_Tumor	tumour	male	Stage II	WildType	Mutated	WildType
+GSM1632914	Sample35_Tumor	tumour	female	Stage III	WildType	WildType	WildType
+GSM1632915	Sample36_Tumor	tumour	male	Stage II	WildType	Mutated	WildType
+GSM1632916	Sample37_Tumor	tumour	female	Stage III	WildType	Mutated	NA
+GSM1632917	Sample38_Tumor	tumour	female	Stage II	WildType	Mutated	NA
+GSM1632918	Sample39_Tumor	tumour	male	Stage I	Mutated	WildType	WildType
+GSM1632919	Sample40_Tumor	tumour	male	Stage III	WildType	WildType	WildType
+GSM1632920	Sample41_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632921	Sample42_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632922	Sample43_Tumor	tumour	female	Stage III	WildType	WildType	WildType
+GSM1632923	Sample44_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1632924	Sample45_Tumor	tumour	female	Stage III	WildType	WildType	WildType
+GSM1632925	Sample46_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632926	Sample47_Tumor	tumour	female	Stage II	Mutated	WildType	Mutated
+GSM1632927	Sample48_Tumor	tumour	male	Stage II	Mutated	WildType	WildType
+GSM1632928	Sample49_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632929	Sample50_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632930	Sample51_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1632931	Sample52_Tumor	tumour	female	Stage I	WildType	Mutated	Mutated
+GSM1632932	Sample53_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632933	Sample54_Tumor	tumour	male	Stage II	WildType	WildType	Mutated
+GSM1632934	Sample55_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632935	Sample56_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1632936	Sample57_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1632937	Sample58_Tumor	tumour	female	Stage III	WildType	WildType	Mutated
+GSM1632938	Sample59_Tumor	tumour	female	Stage I	WildType	Mutated	Mutated
+GSM1632939	Sample60_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632940	Sample61_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632941	Sample62_Tumor	tumour	female	Stage II	WildType	WildType	WildType
+GSM1632942	Sample63_Tumor	tumour	female	Stage III	WildType	Mutated	WildType
+GSM1632943	Sample64_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632944	Sample65_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632945	Sample66_Tumor	tumour	female	Stage II	WildType	WildType	Mutated
+GSM1632946	Sample67_Tumor	tumour	male	Stage II	WildType	WildType	Mutated
+GSM1632947	Sample68_Tumor	tumour	female	Stage I	Mutated	WildType	WildType
+GSM1632948	Sample69_Tumor	tumour	female	Stage I	WildType	Mutated	Mutated
+GSM1632949	Sample70_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632950	Sample71_Tumor	tumour	male	Stage I	WildType	Mutated	Mutated
+GSM1632951	Sample72_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1632952	Sample73_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1632953	Sample74_Tumor	tumour	female	Stage I	NA	WildType	Mutated
+GSM1632954	Sample75_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1632955	Sample76_Tumor	tumour	female	Stage I	Mutated	WildType	WildType
+GSM1632956	Sample77_Tumor	tumour	male	Stage II	WildType	WildType	Mutated
+GSM1632957	Sample78_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632958	Sample79_Tumor	tumour	female	Stage III	WildType	Mutated	Mutated
+GSM1632959	Sample80_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632960	Sample81_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632961	Sample82_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632962	Sample83_Tumor	tumour	male	Stage III	WildType	WildType	Mutated
+GSM1632963	Sample84_Tumor	tumour	female	Stage III	WildType	WildType	Mutated
+GSM1632964	Sample85_Tumor	tumour	female	Stage II	Mutated	WildType	Mutated
+GSM1632965	Sample86_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1632966	Sample87_Tumor	tumour	female	Stage III	Mutated	WildType	Mutated
+GSM1632967	Sample88_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632968	Sample89_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632969	Sample90_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1632970	Sample91_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632971	Sample92_Tumor	tumour	female	Stage III	Mutated	WildType	Mutated
+GSM1632972	Sample93_Tumor	tumour	male	Stage III	WildType	WildType	Mutated
+GSM1632973	Sample94_Normal	normal	male		NA	NA	NA
+GSM1632974	Sample95_Tumor	tumour	male	Stage II	WildType	WildType	NA
+GSM1632975	Sample96_Normal	normal	male		NA	NA	NA
+GSM1632976	Sample97_Tumor	tumour	male	Stage I	WildType	Mutated	NA
+GSM1632977	Sample98_Normal	normal	male		NA	NA	NA
+GSM1632978	Sample99_Tumor	tumour	male	Stage III	WildType	NA	NA
+GSM1632979	Sample100_Tumor	tumour	male	Stage I	WildType	NA	NA
+GSM1632980	Sample101_Tumor	tumour	female	Stage I	WildType	NA	NA
+GSM1632981	Sample102_Normal	normal	female		NA	NA	NA
+GSM1632982	Sample103_Tumor	tumour	female	Stage III	WildType	WildType	NA
+GSM1632983	Sample104_Normal	normal	male		NA	NA	NA
+GSM1632984	Sample105_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1632985	Sample106_Normal	normal	male		NA	NA	NA
+GSM1632986	Sample107_Tumor	tumour	male	Stage III	WildType	Mutated	Mutated
+GSM1632987	Sample108_Normal	normal	female		NA	NA	NA
+GSM1632988	Sample109_Tumor	tumour	female	Stage II	WildType	WildType	WildType
+GSM1632989	Sample110_Normal	normal	female		NA	NA	NA
+GSM1632990	Sample111_Tumor	tumour	female	Stage III	WildType	WildType	WildType
+GSM1632991	Sample112_Normal	normal	male		NA	NA	NA
+GSM1632992	Sample113_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1632993	Sample114_Normal	normal	female		NA	NA	NA
+GSM1632994	Sample115_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1632995	Sample116_Tumor	tumour	male	Stage II	WildType	WildType	WildType
+GSM1632996	Sample117_Normal	normal	female		NA	NA	NA
+GSM1632997	Sample118_Tumor	tumour	female	Stage II	WildType	Mutated	WildType
+GSM1632998	Sample119_Normal	normal	female		NA	NA	NA
+GSM1632999	Sample120_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1633000	Sample121_Tumor	tumour	male	Stage III	WildType	NA	Mutated
+GSM1633001	Sample122_Normal	normal	female		NA	NA	NA
+GSM1633002	Sample123_Tumor	tumour	female	Stage I	Mutated	WildType	Mutated
+GSM1633003	Sample124_Tumor	tumour	female	Stage I	WildType	Mutated	Mutated
+GSM1633004	Sample125_Normal	normal	female		NA	NA	NA
+GSM1633005	Sample126_Tumor	tumour	female	Stage III	Mutated	WildType	Mutated
+GSM1633006	Sample127_Tumor	tumour	male	Stage III	WildType	WildType	WildType
+GSM1633007	Sample128_Tumor	tumour	female	Stage I	Mutated	WildType	Mutated
+GSM1633008	Sample129_Tumor	tumour	female	Stage III	WildType	Mutated	WildType
+GSM1633009	Sample130_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633010	Sample131_Normal	normal	male		NA	NA	NA
+GSM1633011	Sample132_Tumor	tumour	male	Stage III	WildType	WildType	Mutated
+GSM1633012	Sample133_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633013	Sample134_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1633014	Sample135_Tumor	tumour	male	Stage I	WildType	Mutated	Mutated
+GSM1633015	Sample136_Normal	normal	male		NA	NA	NA
+GSM1633016	Sample137_Tumor	tumour	male	Stage II	Mutated	WildType	WildType
+GSM1633017	Sample138_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1633018	Sample139_Tumor	tumour	male	Stage II	WildType	Mutated	WildType
+GSM1633019	Sample140_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633020	Sample141_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1633021	Sample142_Tumor	tumour	female	Stage II	WildType	WildType	NA
+GSM1633022	Sample143_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1633023	Sample144_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633024	Sample145_Tumor	tumour	male	Stage III	Mutated	WildType	WildType
+GSM1633025	Sample146_Tumor	tumour	female	Stage III	WildType	Mutated	WildType
+GSM1633026	Sample147_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1633027	Sample148_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633028	Sample149_Tumor	tumour	female	Stage I	Mutated	WildType	WildType
+GSM1633029	Sample150_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1633030	Sample151_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1633031	Sample152_Tumor	tumour	male	Stage II	WildType	Mutated	Mutated
+GSM1633032	Sample153_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1633033	Sample154_Tumor	tumour	female	Stage II	WildType	Mutated	WildType
+GSM1633034	Sample155_Tumor	tumour	male	Stage I	WildType	Mutated	WildType
+GSM1633035	Sample156_Tumor	tumour	female	Stage III	WildType	WildType	WildType
+GSM1633036	Sample157_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1633037	Sample158_Tumor	tumour	female	Stage I	Mutated	WildType	WildType
+GSM1633038	Sample159_Tumor	tumour	male	Stage II	WildType	Mutated	WildType
+GSM1633039	Sample160_Tumor	tumour	male	Stage II	WildType	Mutated	WildType
+GSM1633040	Sample161_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633041	Sample162_Tumor	tumour	female	Stage II	WildType	Mutated	WildType
+GSM1633042	Sample163_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633043	Sample164_Tumor	tumour	female	Stage II	Mutated	WildType	Mutated
+GSM1633044	Sample165_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633045	Sample166_Tumor	tumour	female	Stage II	WildType	WildType	WildType
+GSM1633046	Sample167_Tumor	tumour	male	Stage I	WildType	WildType	Mutated
+GSM1633047	Sample168_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1633048	Sample169_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633049	Sample170_Tumor	tumour	female	Stage III	NA	Mutated	WildType
+GSM1633050	Sample171_Tumor	tumour	female	Stage I	WildType	WildType	WildType
+GSM1633051	Sample172_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633052	Sample173_Tumor	tumour	female	Stage I	WildType	WildType	Mutated
+GSM1633053	Sample174_Tumor	tumour	male	Stage I	WildType	NA	Mutated
+GSM1633054	Sample175_Tumor	tumour	male	Stage III	WildType	WildType	Mutated
+GSM1633055	Sample176_Tumor	tumour	female	Stage II	WildType	WildType	Mutated
+GSM1633056	Sample177_Tumor	tumour	male	Stage I	WildType	WildType	WildType
+GSM1633057	Sample178_Normal	normal	female		NA	NA	NA
+GSM1633058	Sample179_Tumor	tumour	female	Stage I	WildType	Mutated	WildType
+GSM1633059	Sample180_Tumor	tumour	female	Stage I	Mutated	WildType	Mutated
+GSM1633060	Sample181_Tumor	tumour	female	Stage II	WildType	WildType	WildType
+GSM1633061	Sample182_Tumor	tumour	female	Stage II	WildType	WildType	Mutated
+GSM1633062	Sample183_Tumor	tumour	female	Stage III	WildType	Mutated	Mutated

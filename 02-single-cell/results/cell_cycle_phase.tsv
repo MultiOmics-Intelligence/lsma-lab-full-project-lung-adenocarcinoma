@@ -1,0 +1,31 @@
+cell_type	G1	S	G2M
+B cell	1622	213	336
+CD14-positive monocyte	757	13	33
+CD14-positive, CD16-positive monocyte	457	10	11
+CD141-positive myeloid dendritic cell	74	5	5
+CD38-positive naive B cell	99	16	23
+CD4-positive type I NK T cell secreting interferon-gamma	222	23	63
+CD4-positive, CD25-positive, alpha-beta regulatory T cell	2098	241	654
+CD4-positive, alpha-beta T cell	1746	220	622
+CD8-positive, alpha-beta T cell	3135	504	1479
+CD8-positive, alpha-beta cytotoxic T cell	537	61	182
+activated CD4-positive, alpha-beta T cell, human	2253	264	670
+conventional dendritic cell	1429	65	63
+cycling mononuclear phagocyte	38	407	547
+endothelial cell	690	22	11
+epithelial cell of lung	10856	1063	946
+fibroblast of lung	1138	31	9
+gamma-delta T cell	228	26	76
+innate lymphoid cell	165	20	54
+lung macrophage	636	17	8
+lung pericyte	22	0	0
+lymphocyte	22	330	361
+macrophage	4803	127	111
+mast cell	643	23	71
+mature NK T cell	180	25	58
+naive thymus-derived CD4-positive, alpha-beta T cell	1440	191	331
+naive thymus-derived CD8-positive, alpha-beta T cell	349	36	83
+natural killer cell	529	59	172
+neutrophil	443	17	19
+plasma cell	1267	26	53
+plasmacytoid dendritic cell	299	4	6

@@ -1,0 +1,4 @@
+layer_1	layer_2	test	pairs_tested	significant	strongest
+expression	methylation	Spearman correlation	10000	757	C16orf89 with cg22077197
+expression	mutations	Wilcoxon rank-sum test	3000	15	KEAP1 with AKR1C2
+methylation	mutations	Wilcoxon rank-sum test	3000	2	RYR2 with cg14802502
